@@ -144,7 +144,7 @@ function Footer() {
 
             <div>
               <small>Location</small>
-              <p>Mysuru, Karnataka is 570009</p>
+              <p>Mysore, Karnataka is 570009</p>
             </div>
           </div>
 
@@ -166,7 +166,7 @@ function Footer() {
 
             <div>
               <small>Email</small>
-              <p>info@mysururccpipes.in</p>
+              <p>info@mysorerccpipes.in</p>
             </div>
           </div>
         </div>
