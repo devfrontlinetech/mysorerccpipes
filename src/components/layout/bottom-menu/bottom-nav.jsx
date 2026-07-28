@@ -61,15 +61,16 @@ function Bottomnav({ onMenuClick }) {
 
       {/* Floating Buttons */}
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/919600544451"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-btn"
+        aria-label="WhatsApp"
       >
         <FaWhatsapp />
       </a>
 
-      <a href="tel:1234567890" className="call-btn">
+      <a href="tel:+919600544451" className="call-btn" aria-label="Call Us">
         <FaPhoneAlt />
       </a>
     </div>
