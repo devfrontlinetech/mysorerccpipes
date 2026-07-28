@@ -5,6 +5,7 @@ import Products from "./components/home/products.jsx";
 import ManufacturingProcess from "./components/home/manufacture-process.jsx";
 import WhyChoose from "./components/home/why-choose.jsx";
 import ContactSection from "./components/home/contact.jsx";
+import Map from "./components/home/map.jsx";
 import Footer from "./components/layout/footer/footer.jsx";
 import Float from "./components/common/float.jsx";
 import Bottomnav from "./components/layout/bottom-menu/bottom-nav.jsx";
@@ -41,6 +42,9 @@ function App() {
 
       <section id="contact">
         <ContactSection />
+      </section>
+      <section id="map">
+        <Map />
       </section>
       <Footer />
 
