@@ -62,7 +62,7 @@ function ContactSection() {
 
               <div>
                 <span>Service Area</span>
-                <strong>Mysuru, Karnataka is 570009 </strong>
+                <strong>Mysore, Karnataka is 570009 </strong>
               </div>
             </div>
           </div>
