@@ -43,9 +43,9 @@ function App() {
       <section id="contact">
         <ContactSection />
       </section>
-      <section id="map">
-        <Map />
-      </section>
+
+      <Map />
+
       <Footer />
 
       <Bottomnav onMenuClick={handleMenuClick} />
