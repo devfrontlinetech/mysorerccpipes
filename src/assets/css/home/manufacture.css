@@ -1,0 +1,369 @@
+/* =========================================================
+   MANUFACTURING PROCESS SECTION
+========================================================= */
+
+.manufacturing-section {
+  position: relative;
+  padding: 100px 5%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f7faf9 0%, #ffffff 100%);
+}
+
+/* Background decoration */
+
+.manufacturing-section::before,
+.manufacturing-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.manufacturing-section::before {
+  top: -160px;
+  left: -160px;
+  width: 380px;
+  height: 380px;
+  background: rgba(157, 231, 108, 0.12);
+  filter: blur(8px);
+}
+
+.manufacturing-section::after {
+  right: -180px;
+  bottom: -180px;
+  width: 420px;
+  height: 420px;
+  background: rgba(20, 205, 179, 0.08);
+  filter: blur(10px);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.manufacturing-header {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.manufacturing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: #12ad91;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.manufacturing-eyebrow::before,
+.manufacturing-eyebrow::after {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #9de76c, #14cdb3);
+}
+
+.manufacturing-title {
+  margin: 0 0 18px;
+  color: #172b3a;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.manufacturing-subtitle {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #68757d;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* =========================================================
+   PROCESS GRID
+========================================================= */
+
+.manufacturing-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+/* =========================================================
+   PROCESS CARD
+========================================================= */
+
+.manufacturing-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(20, 205, 179, 0.12);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 43, 58, 0.06);
+  transition:
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.manufacturing-card:hover {
+  border-color: rgba(20, 205, 179, 0.35);
+  box-shadow: 0 20px 45px rgba(23, 43, 58, 0.14);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.manufacturing-image {
+  position: relative;
+  height: 235px;
+  overflow: hidden;
+  background: #e9f0ed;
+}
+
+.manufacturing-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 15, 28, 0.5), transparent 55%);
+  pointer-events: none;
+}
+
+.manufacturing-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.manufacturing-card:hover .manufacturing-image img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+/* =========================================================
+   STEP NUMBER
+========================================================= */
+
+.manufacturing-number {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(5, 15, 28, 0.7);
+  color: #9de76c;
+  font-size: 14px;
+  font-weight: 800;
+  backdrop-filter: blur(8px);
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.manufacturing-card:hover .manufacturing-number {
+  transform: rotate(360deg);
+  background: #12b99c;
+  color: #ffffff;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.manufacturing-content {
+  padding: 24px 22px 26px;
+}
+
+.manufacturing-content h3 {
+  position: relative;
+  margin: 0 0 12px;
+  padding-left: 14px;
+  color: #172b3a;
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.manufacturing-content h3::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  width: 3px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #9de76c, #14cdb3);
+}
+
+.manufacturing-content p {
+  margin: 0;
+  color: #6d7880;
+  font-size: 13px;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+/* =========================================================
+   CARD HOVER LINE
+========================================================= */
+
+.manufacturing-card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  height: 3px;
+  background: linear-gradient(90deg, #9de76c, #14cdb3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.manufacturing-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+  .manufacturing-section {
+    padding: 80px 30px;
+  }
+
+  .manufacturing-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .manufacturing-image {
+    height: 220px;
+  }
+
+  .manufacturing-title {
+    font-size: clamp(32px, 5vw, 44px);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .manufacturing-section {
+    padding: 65px 20px;
+  }
+
+  .manufacturing-header {
+    margin-bottom: 38px;
+  }
+
+  .manufacturing-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
+  .manufacturing-eyebrow::before,
+  .manufacturing-eyebrow::after {
+    width: 18px;
+  }
+
+  .manufacturing-title {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+  }
+
+  .manufacturing-subtitle {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .manufacturing-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    gap: 20px;
+  }
+
+  .manufacturing-image {
+    height: 230px;
+  }
+
+  .manufacturing-content {
+    padding: 21px 20px 24px;
+  }
+
+  .manufacturing-content h3 {
+    font-size: 19px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .manufacturing-section {
+    padding: 55px 15px;
+  }
+
+  .manufacturing-title {
+    font-size: 30px;
+  }
+
+  .manufacturing-image {
+    height: 205px;
+  }
+
+  .manufacturing-number {
+    width: 42px;
+    height: 42px;
+    left: 14px;
+    bottom: 14px;
+    font-size: 12px;
+  }
+
+  .manufacturing-content p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .manufacturing-card,
+  .manufacturing-image img,
+  .manufacturing-number,
+  .manufacturing-card::before {
+    transition: none;
+  }
+}

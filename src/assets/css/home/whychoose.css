@@ -1,0 +1,249 @@
+.whychoose-section {
+  position: relative;
+  padding: 110px 5%;
+  background: url("../../images/products/whychoose.jpg") center / cover fixed
+    no-repeat;
+  overflow: hidden;
+}
+
+.whychoose-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 20, 32, 0.88),
+    rgba(6, 20, 32, 0.7),
+    rgba(6, 20, 32, 0.55)
+  );
+}
+
+.whychoose-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.whychoose-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.whychoose-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.65));
+}
+
+.whychoose-image img {
+  display: block;
+  width: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.whychoose-image:hover img {
+  transform: scale(1.06);
+}
+
+.whychoose-image-badge {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 18px;
+  border-left: 3px solid #9de76c;
+  background: rgba(5, 15, 28, 0.7);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+}
+
+.whychoose-image-badge strong {
+  color: #9de76c;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.whychoose-image-badge span {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.whychoose-content {
+  color: #ffffff;
+}
+
+.whychoose-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: #9de76c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.whychoose-eyebrow::before {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: #9de76c;
+}
+
+.whychoose-content h2 {
+  max-width: 650px;
+  margin: 0 0 20px;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.whychoose-intro {
+  max-width: 650px;
+  text-align: justify;
+  margin: 0 0 35px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.whychoose-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.whychoose-item {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.whychoose-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(157, 231, 108, 0.6);
+  background: rgba(157, 231, 108, 0.1);
+}
+
+.whychoose-number {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9de76c, #14cdb3);
+  color: #10222c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.whychoose-item-content h4 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.whychoose-item-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 1100px) {
+  .whychoose-wrapper {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .whychoose-image {
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .whychoose-image img {
+    min-height: 400px;
+  }
+
+  .whychoose-content {
+    max-width: 850px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .whychoose-section {
+    padding: 75px 20px;
+    background-attachment: scroll;
+  }
+
+  .whychoose-image img {
+    min-height: 300px;
+  }
+
+  .whychoose-content h2 {
+    font-size: 34px;
+  }
+
+  .whychoose-intro {
+    font-size: 14px;
+  }
+
+  .whychoose-list {
+    grid-template-columns: 1fr;
+  }
+
+  .whychoose-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whychoose-section {
+    padding: 60px 16px;
+  }
+
+  .whychoose-image img {
+    min-height: 260px;
+  }
+
+  .whychoose-image-badge {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .whychoose-content h2 {
+    font-size: 30px;
+  }
+
+  .whychoose-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}

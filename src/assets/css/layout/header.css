@@ -1,0 +1,267 @@
+/* =========================================================
+   RCC CONCRETE PIPE HEADER
+========================================================= */
+
+.concretepipe-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0);
+  transition: all 0.35s ease;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.concretepipe-navbar {
+  width: 80%;
+  max-width: 1440px;
+  min-height: 86px;
+  margin: 0 auto;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.35s ease;
+}
+
+/* =========================================================
+   SCROLLED HEADER
+========================================================= */
+
+.concretepipe-header-scrolled {
+  background: rgba(217, 248, 217, 0.98); 
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.concretepipe-header-scrolled .concretepipe-navbar {
+  min-height: 72px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.concretepipe-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.concretepipe-logo-img {
+  width: 145px !important;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.concretepipe-logo-img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.concretepipe-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 auto;
+  padding: 0 30px;
+  list-style: none;
+}
+
+.concretepipe-nav-link-btn {
+  position: relative;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px 16px;
+  color: #b9ffa3;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.concretepipe-nav-scrolled .concretepipe-nav-link-btn {
+  color: #0f3b6d;
+}
+
+.concretepipe-nav-link-btn::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 2px;
+  height: 2px;
+  background: #19c9a5;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.concretepipe-nav-link-btn:hover {
+  color: #13bfa0;
+}
+
+.concretepipe-nav-link-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   CTA AREA
+========================================================= */
+
+.concretepipe-header-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.concretepipe-cta-btn {
+  min-width: 135px;
+  padding: 14px 27px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(100deg, #a9e96b, #14cdb3);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(20, 205, 179, 0.18);
+  transition: all 0.3s ease;
+}
+
+.concretepipe-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(20, 205, 179, 0.28);
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1199px) {
+  .concretepipe-navbar {
+    width: 90%;
+    padding: 0 3%;
+  }
+
+  .concretepipe-logo-img {
+    width: 140px !important;
+  }
+
+  .concretepipe-nav-links {
+    padding: 0 15px;
+  }
+
+  .concretepipe-nav-link-btn {
+    padding: 10px 10px;
+
+    font-size: 12px;
+  }
+
+  .concretepipe-cta-btn {
+    min-width: 120px;
+
+    padding: 13px 20px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ONLY LOGO + BUTTON
+========================================================= */
+
+@media (max-width: 991px) {
+  .concretepipe-navbar {
+    width: 80%;
+    min-height: 76px;
+    padding: 0 30px;
+  }
+
+  /* Hide navigation */
+  .concretepipe-nav-links {
+    display: none;
+  }
+
+  .concretepipe-logo-img {
+    width: 145px !important;
+  }
+
+  .concretepipe-cta-btn {
+    min-width: 115px;
+    padding: 12px 20px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ONLY LOGO + BUTTON
+========================================================= */
+
+@media (max-width: 767px) {
+  .concretepipe-navbar {
+    min-height: 70px;
+    padding: 0 20px;
+  }
+
+  .concretepipe-logo-img {
+    width: 135px !important;
+  }
+
+  .concretepipe-cta-btn {
+    min-width: 105px;
+    padding: 11px 16px;
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .concretepipe-navbar {
+    min-height: 64px;
+    padding: 0 16px;
+  }
+
+  .concretepipe-logo-img {
+    width: 125px !important;
+  }
+
+  .concretepipe-cta-btn {
+    min-width: 95px;
+    padding: 10px 14px;
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .concretepipe-navbar {
+    padding: 0 12px;
+  }
+
+  .concretepipe-logo-img {
+    width: 115px !important;
+  }
+
+  .concretepipe-cta-btn {
+    min-width: 88px;
+    padding: 9px 12px;
+  }
+}
