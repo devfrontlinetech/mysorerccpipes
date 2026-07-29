@@ -1,13 +1,7 @@
 import React from "react";
 import "../../assets/css/home/hero.css";
 import heroVideo from "../../assets/video/hero-video.mp4";
-
-import {
-  // FaArrowRight,
-  FaCheckCircle,
-  // FaPhoneAlt,
-  FaChevronDown,
-} from "react-icons/fa";
+import { FaCheckCircle, FaChevronDown } from "react-icons/fa";
 
 function HeroSection() {
   const scrollToProducts = () => {
@@ -21,20 +15,8 @@ function HeroSection() {
     }
   };
 
-  // const scrollToContact = () => {
-  //   const section = document.getElementById("contact");
-
-  //   if (section) {
-  //     section.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "start",
-  //     });
-  //   }
-  // };
-
   return (
     <section className="hero-section" id="home">
-      {/* BACKGROUND VIDEO */}
       <video
         className="hero-video"
         autoPlay
@@ -47,50 +29,25 @@ function HeroSection() {
         Your browser does not support the video tag.
       </video>
 
-      {/* VIDEO OVERLAY */}
       <div className="hero-overlay"></div>
 
-      {/* HERO CONTENT */}
       <div className="hero-container">
         <div className="hero-content">
-          {/* EYEBROW */}
           <div className="hero-eyebrow">
             <span className="hero-eyebrow-line"></span>
             <span>Trusted RCC Pipe Manufacturer</span>
           </div>
 
-          {/* TITLE */}
           <h1 className="hero-title">
             Strong Foundations.
             <span>Reliable Infrastructure.</span>
           </h1>
 
-          {/* DESCRIPTION */}
           <p className="hero-description">
             High-quality reinforced cement concrete pipes engineered for
             drainage, infrastructure, construction, and industrial projects.
           </p>
 
-          {/* BUTTONS */}
-          {/* <div className="hero-actions">
-            <button
-              className="hero-btn hero-btn-primary"
-              onClick={scrollToProducts}
-            >
-              Explore Products
-              <FaArrowRight />
-            </button>
-
-            <button
-              className="hero-btn hero-btn-outline"
-              onClick={scrollToContact}
-            >
-              <FaPhoneAlt />
-              Get a Quote
-            </button>
-          </div> */}
-
-          {/* FEATURES */}
           <div className="hero-features">
             <div className="hero-feature">
               <FaCheckCircle />
@@ -110,7 +67,6 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* BOTTOM STATS */}
       <div className="hero-bottom">
         <div className="hero-stat">
           <strong>10+</strong>
@@ -128,7 +84,6 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* SCROLL INDICATOR */}
       <button
         className="hero-scroll"
         onClick={scrollToProducts}
